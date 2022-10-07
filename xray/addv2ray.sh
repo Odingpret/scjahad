@@ -53,29 +53,30 @@ cat>/etc/xray/vmess-$user-tls.json<<EOF
       {
       "v": "2",
       "ps": "${user}",
-      "add": "${domain}",
+      "add": "104.21.71.112",
       "port": "${tls}",
       "id": "${uuid}",
       "aid": "0",
       "net": "ws",
-      "path": "/vmess/",
+      "path": "wss://blog.clova.line.me/vmess/",
       "type": "none",
-      "host": "",
+      "host": "${domain}",
       "tls": "tls"
+      "SNI": "blog.clova.line.me"
 }
 EOF
 cat>/etc/xray/vmess-$user-nontls.json<<EOF
       {
       "v": "2",
       "ps": "${user}",
-      "add": "${domain}",
+      "add": "zendesk1.grabtaxi.com",
       "port": "${nontls}",
       "id": "${uuid}",
       "aid": "0",
       "net": "ws",
       "path": "/vmess/",
       "type": "none",
-      "host": "",
+      "host": "${domain}",
       "tls": "none"
 }
 EOF
